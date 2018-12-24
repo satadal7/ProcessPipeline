@@ -42,6 +42,14 @@ Runtimes:
 
 - When overriding environment variables, it is recommended that you include basic environment variables such as `SystemRoot`, etc.
 
+# Implementation Assumptions
+
+This library assumes that the underlying implementation has the following characteristics:
+
+- *nix
+    - The inner value of a SafeFileHandle is a file descriptor.
+    - The inner value of a SafeProcessHandle is a process id.
+
 # Examples
 
 See [ProcessPipeline.Example](src/ProcessPipeline.Example/) (not yet) for more examples.
